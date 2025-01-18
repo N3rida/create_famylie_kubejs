@@ -19,12 +19,21 @@ StartupEvents.registry('item', event => {
        * If true, item will starts it use animation if duration > 0.
        */
       .use((level, player, hand) => {
-              const angle = player.getLookAngle()
-              const eye_pos = player.eyePosition()
-              const reach = 5 // blocks
-              const targeted = level.clip()
-              console.log(targeted)
               return true
           })
+      .finishUsing((itemstack, level, entity) => {
+        /*
+        if (block.y > 122 && block.y <= 128){
+          for (let i = 123; i <= 128; i++) {
+            if (block == "minecraft:bedrock") {
+              // Break block
+            }
+          }
+        }
+        */
+        console.log(entity.facing)
+        console.log(entity.getFacing())
+        console.log(entity.getLookAngle())
+      })
   })
   
