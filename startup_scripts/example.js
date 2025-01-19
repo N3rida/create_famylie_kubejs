@@ -21,19 +21,5 @@ StartupEvents.registry('item', event => {
       .use((level, player, hand) => {
               return true
           })
-      .finishUsing((itemstack, level, entity) => {
-        /*
-        if (block.y > 122 && block.y <= 128){
-          for (let i = 123; i <= 128; i++) {
-            if (block == "minecraft:bedrock") {
-              // Break block
-            }
-          }
-        }
-        */
-        console.log(entity.facing)
-        console.log(entity.getFacing())
-        console.log(entity.getLookAngle())
-      })
   })
   
