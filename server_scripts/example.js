@@ -5,10 +5,13 @@ BlockEvents.leftClicked(event => {
     console.log(event.block)
     console.log(event.block.y)
     console.log(event.item)
-    if (event.item == "bedrock_breaker" && 
-        event.block == "minecraft:bedrock" && 
-        event.block.y > 122 && 
-        event.block.y < 130){
-            event.level.tell("Ouii!")
+    if (event.item == "kubejs:bedrock_breaker"){
+        event.level.tell("BB")
+        if (event.block == "minecraft:bedrock"){
+            event.level.tell("Bedrock")
+            if ( event.block.y > 122 && event.block.y <= 128){
+                event.level.tell("height")
+            }
+        }
     }
 })
