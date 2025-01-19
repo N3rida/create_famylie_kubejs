@@ -2,5 +2,5 @@
 
 // Visit the wiki for more info - https://kubejs.com/
 BlockEvents.leftClicked(event => {
-    console.log(event)
+    console.log(event.block)
 })
