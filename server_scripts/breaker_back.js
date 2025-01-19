@@ -5,7 +5,7 @@ BlockEvents.leftClicked(event => {
                 let dblock = new BlockPos(event.block.x, y, event.block.z)
                 let tryDestroy = event.level.getBlock(event.block.x, y, event.block.z)
                 if (tryDestroy == "minecraft:bedrock") {
-                    event.level.destroyBlock(dblock)
+                    event.level.destroyBlock(dblock,false)
                 }
             }
         }
