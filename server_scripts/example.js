@@ -11,6 +11,9 @@ BlockEvents.leftClicked(event => {
             event.level.tell("Bedrock")
             if ( event.block.y > 122 && event.block.y <= 128){
                 event.level.tell("height")
+                for (let y = 123; i <= 128; i++){
+                    event.level.destroyBlock([event.block.x,y,event.block.z])
+                }
             }
         }
     }
